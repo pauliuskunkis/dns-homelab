@@ -1,0 +1,12 @@
+options {
+	directory "/var/cache/bind";
+
+	auth-nxdomain no;
+	recursion yes;
+	allow-recursion { localhost; 192.168.1.0/24; };
+	listen-on port 53 { 127.0.0.1;  192.168.1.0/24; };
+	allow-query { localhost; 192.168.1.0/24; };
+	allow-transfer { none; };
+	notify yes;
+
+};

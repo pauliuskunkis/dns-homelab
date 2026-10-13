@@ -1,0 +1,18 @@
+//
+// Do any local configuration here
+//
+
+zone "intranet.local" {
+
+	type forward;
+	forward only;
+
+	forwarders {
+	
+	192.168.1.100;
+	192.168.1.101;
+
+};
+
+};
+

@@ -1,0 +1,21 @@
+//
+// Do any local configuration here
+//
+
+zone "intranet.local" IN {
+
+	type slave;
+	file "/var/cache/bind/forward.intranet.local";
+	allow-query { 192.168.1.0/24; };
+	masters { 192.168.1.100; };
+
+};
+
+zone "1.168.192.in-addr.arpa" IN {
+
+	type slave;
+	file "/var/cache/bind/reverse.intranet.local";
+	masters { 192.168.1.100; };
+
+};
+
